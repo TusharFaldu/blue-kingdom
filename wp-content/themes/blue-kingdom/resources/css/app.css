@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Prompt:wght@400;500;600;700&display=swap');
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+@import "./external.css";
+
+:root {
+    --font-sans: 'Prompt', sans-serif;
+    --font-heading: 'Fjalla One', sans-serif;
+  }
+  
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+  
+
+

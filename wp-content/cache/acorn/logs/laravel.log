@@ -1,0 +1,21 @@
+[2025-04-10 18:23:17] production.ERROR: Function wp_enqueue_script was called <strong>incorrectly</strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts</code>, <code>admin_enqueue_scripts</code>, or <code>login_enqueue_scripts</code> hooks. This notice was triggered by the <code>jquery</code> handle. Please see <a href="https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.3.0.) {"userId":1,"exception":"[object] (ErrorException(code: 0): Function wp_enqueue_script was called <strong>incorrectly</strong>. Scripts and styles should not be registered or enqueued until the <code>wp_enqueue_scripts</code>, <code>admin_enqueue_scripts</code>, or <code>login_enqueue_scripts</code> hooks. This notice was triggered by the <code>jquery</code> handle. Please see <a href=\"https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/\">Debugging in WordPress</a> for more information. (This message was added in version 3.3.0.) at C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\functions.php:6114)
+[stacktrace]
+#0 C:\\xampp\\htdocs\\blue-kingdom\\wp-content\\themes\\blue-kingdom\\vendor\\roots\\acorn\\src\\Roots\\Acorn\\Bootstrap\\HandleExceptions.php(49): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(1024, 'Function wp_enq...', 'C:\\\\xampp\\\\htdocs...', 6114, Array)
+#1 [internal function]: Roots\\Acorn\\Bootstrap\\HandleExceptions->handleError(1024, 'Function wp_enq...', 'C:\\\\xampp\\\\htdocs...', 6114)
+#2 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\functions.php(6114): trigger_error('Function wp_enq...', 1024)
+#3 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\functions.php(6054): wp_trigger_error('', 'Function wp_enq...')
+#4 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\functions.wp-scripts.php(64): _doing_it_wrong('wp_enqueue_scri...', 'Function wp_enq...', '(This message w...')
+#5 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\functions.wp-scripts.php(360): _wp_scripts_maybe_doing_it_wrong('wp_enqueue_scri...', 'jquery')
+#6 C:\\xampp\\htdocs\\blue-kingdom\\wp-content\\themes\\blue-kingdom\\app\\setup.php(157): wp_enqueue_script('jquery')
+#7 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\template.php(810): require_once('C:\\\\xampp\\\\htdocs...')
+#8 C:\\xampp\\htdocs\\blue-kingdom\\wp-includes\\template.php(745): load_template('C:\\\\xampp\\\\htdocs...', true, Array)
+#9 C:\\xampp\\htdocs\\blue-kingdom\\wp-content\\themes\\blue-kingdom\\functions.php(54): locate_template('app/setup.php', true, true)
+#10 C:\\xampp\\htdocs\\blue-kingdom\\wp-content\\themes\\blue-kingdom\\vendor\\illuminate\\collections\\Traits\\EnumeratesValues.php(274): {closure}('app/setup.php', 0)
+#11 C:\\xampp\\htdocs\\blue-kingdom\\wp-content\\themes\\blue-kingdom\\functions.php(53): Illuminate\\Support\\Collection->each(Object(Closure))
+#12 C:\\xampp\\htdocs\\blue-kingdom\\wp-settings.php(672): include('C:\\\\xampp\\\\htdocs...')
+#13 C:\\xampp\\htdocs\\blue-kingdom\\wp-config.php(102): require_once('C:\\\\xampp\\\\htdocs...')
+#14 C:\\xampp\\htdocs\\blue-kingdom\\wp-load.php(50): require_once('C:\\\\xampp\\\\htdocs...')
+#15 C:\\xampp\\htdocs\\blue-kingdom\\wp-admin\\admin.php(34): require_once('C:\\\\xampp\\\\htdocs...')
+#16 C:\\xampp\\htdocs\\blue-kingdom\\wp-admin\\plugins.php(10): require_once('C:\\\\xampp\\\\htdocs...')
+#17 {main}
+"} 
